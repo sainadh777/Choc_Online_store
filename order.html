@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- 
+Sainadh Ainala
+CS545
+Fall 2017
+Project #4
+jadrn074
+--->
+<head>
+	<title>Bertha's Deluxe Chocolates</title>
+	        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		        <link rel="stylesheet" type="text/css"  href="project4.css" />
+                <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.2.custom/css/custom-theme/jquery-ui-1.10.2.custom.min.css" /> 
+				
+                          <script type="text/javascript" src="/jquery/jquery.js"></script>
+                          <script type="text/javascript" src="jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js"></script>  
+                          <script type="text/javascript" src="ajax_get_lib.js"></script>
+                          <script type="text/javascript" src="ajax_populate_page.js"></script>
+                          <script type="text/javascript" src="shopping_cart.js"></script>
+</head>
+
+<body>
+<div id="pages" class="center"> 
+<h1>Bertha's Deluxe Chocolates</h1>
+		    <a href="index.html">Home</a>
+			<a href="product.html">Products</a>
+		    <a href="order.html">Order Online</a>	
+		    <a href="AboutUs.html">About Us</a>
+		    <a href="Contact.html">Contact</a>
+</div>
+
+<div class="ui-widget">
+<div id="counter"><a id="sh-cart" href="order.html" >Your cart :<span id="count">0</span></a></div> 
+<div id="content">
+<br/>
+</div>	
+	
+<div id="dialog-modal" class="widget-dialog-container" title="Complete Your Order"> 
+<form  name="orderform"  method="post" action="/perl/jadrn074/read_cookie1.cgi">   
+    <fieldset>
+	<legend>Billing Information</legend>
+			<table>
+        <tr>
+            <td class="required"><label>First Name:</label></td>
+            <td><input type="text" name="fname" id="fname" size="20" /></td>
+        </tr>
+		 <tr>
+            <td class="required"><label>Last Name:</label></td>
+            <td><input type="text" name="lname" id="lname" size="20"/></td>
+        </tr>
+        <tr>
+            <td class="required"><label>Address:</label></td>
+            <td><Input type="text" name="address" id="address" size="50" /></td>
+        </tr>
+		<tr>
+		<td></td>
+		<td><Input type="text" name="address"  id="address" size="50" /></td>
+		</tr>
+        <tr>
+            <td class="required"><label>City:</label></td>
+            <td><Input type="text" name="city" id="city" size="20"  required/></td>
+        </tr>
+        <tr>
+            <td class="required"><label>State:</label></td>
+            <td><Input type="text" name="state" id="state" size="5" maxlength="2" required/></td>
+        </tr>
+        <tr>
+            <td class="required"><label>Zip:</label></td>
+            <td><Input type="text" name="zip" id="zip" size="7" maxlength="5" required/></td>            
+        </tr> 
+        <tr>
+        	<td class="required"><label>Phone:</label></td>
+        	<td>(<input type ="text" name ="area_phone"  id ="area_phone" size="4" maxlength ="3" required/>)
+ 	     	<input type="text" name="prefix_phone" id="prefix_phone" size="4" maxlength="3" required/>
+ 	     	<input type="text" name="phone" id="phone"  size="5"  maxlength="4" required/></td>           
+        </tr>
+		<tr>
+			<td class="required"><label>Email:</label></td>
+			<td><Input type="text" name="email" id="email" size="20" required /></td>            
+			</tr>
+			<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+			</tr>
+        </table> 
+</fieldset>
+		<input type="checkbox" name="copy" id="copy" value="Shipping Address is same as Billing"><label>Shipping Address is same as Billing </label> <br>
+<fieldset>
+        <legend>Shipping Information</legend>
+		<div id="shipping">
+        <table> 	
+        <tr>
+            <td class="required"><label>First Name:</label></td>
+            <td><input type="text" name="ship_fname" id="ship_fname" size="20"  required /></td>
+        </tr>
+		 <tr>
+            <td class="required"><label>Last Name:</label></td>
+            <td><input type="text" name="ship_lname" id="ship_lname" size="20"  required /></td>
+        </tr>
+        <tr>
+            <td class="required"><label>Address:</label></td>
+            <td><Input type="text" name="ship_address" id="ship_address" size="25" required/></td>
+        </tr>
+		<tr>
+            <td></td>
+            <td><Input type="text" name="ship_address" id="ship_address" size="25" /></td>
+        </tr>
+        <tr>
+            <td class="required"><label>City:</label></td>
+            <td><Input type="text" name="ship_city" id="ship_city" size="20" required/></td>
+        </tr>
+        <tr>
+            <td class="required"><label>State:</label></td>
+            <td><Input type="text" name="ship_state" id="ship_state" size="4" maxlength= "2" required/></td>
+        </tr>
+        <tr>
+            <td class="required"><label>Zip:</label></td>
+            <td><Input type="text" name="ship_zip" size="6" id="ship_zip" maxlength= "5" required/></td>            
+        </tr> 
+        <tr>
+        	<td class="required"><label>Phone:</label></td>
+        	<td>(<input type ="text" name ="ship_area_phone"  id="ship_area_phone" size="5" maxlength ="3" required/>)
+ 	     	<input type="text" name="ship_prefix_phone"  id="ship_prefix_phone" size="5" maxlength="3" required/>
+ 	     	<input type="text" name="ship_phone" size="5" id="ship_phone" maxlength="6" required/></td>           
+        </tr>	
+		</table>
+</div>		
+</fieldset>
+<fieldset>
+<legend>Payment Details</legend>
+         <table>
+		 <tr>
+	<td><label>Payment Info:</label></td>
+		     	<td><select required>
+				<option name="payment" value="">None</option>
+				<option name="payment" value='Discover'>Discover</option>
+				<option name="payment" value='Capital One'>Capital One</option>
+				<option name="payment" value='Visa' >Visa</option>
+				<option name="payment" value='Mastercard'>Mastercard</option>
+				<option name="payment" value='AmericanExpress'>American Express</option>
+				</select> </td>
+        </tr> 
+        <tr>
+            <td class="required"><label>Card Number:</label></td>
+            <td><Input type="text" name="card" size="20" maxlength="16" required/></td>            
+        </tr>
+        <tr>
+            <td class="required"><label>Expiry Date:</label></td>
+            <td><input type='text' name='month' id='month'  placeholder="MM" size='3' maxlength='2'/> 
+			<input type='text' name='year'  placeholder="YYYY" id='year' size='6' maxlength='4'/></td>            
+        </tr>
+                     
+    </table> 
+</fieldset>
+					
+			<div id="message_line">&nbsp;</div>
+			<div id="button_panel">
+				<input type="reset" value="Reset"/>
+	            <input type="submit"  class="ui-button" value="Submit Order" id="temp" />
+				</div>
+</form>   
+</div>                              
+</div>
+</body>
+</html>    

@@ -1,0 +1,200 @@
+<!-- 
+Sainadh Ainala
+CS545
+Fall 2017
+Project #4
+jadrn074
+---!>
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+html, body {
+    height: 100%;
+    background-color: chocolate;
+	   }
+
+	   #add {
+        font-style: italic;
+        font-weight: bold;
+        color: green;
+        display: none;
+	   margin-left: 50px;}
+h3,h1{
+text-align: center;
+margin:auto;
+	padding:2px;
+}
+    p{
+margin:auto;
+	padding:5px;
+}
+#home{
+	text-align: center;
+margin:auto;
+border: 2px solid black;
+ font-style: italic;
+	padding:10px;
+	
+}
+a:link {
+  text-decoration: none;
+  font-size: 18px;
+  color:black ;
+  padding: 5px;
+}
+a:visited {
+  text-decoration: none;
+  color:black ;
+}
+a:hover{
+	font-weight: bold;
+	color:#e5ccb3;
+}
+a:active{
+	text-decoration: underline;
+	color:#663300;
+}
+#information{
+	margin: 2% 5% 2% 5%;
+	padding:2px;
+}
+#pic{
+float:left;
+padding:10px 5px 5px 10px;
+height:200px;
+width:300px
+}
+img{
+padding:10px 5px 2px 10px;	
+}
+
+.center{
+	
+	text-align: center;
+}   
+#counter {
+    position: absolute;
+    top: 15px;
+	right:15px;
+	color: black;
+    right: 15px;
+    font-weight: normal;
+    font-size: 80%;
+    }  
+#cart_image{
+	position: absolute;
+    width: 50px;
+	height: 40px;
+	margin-top:12px;
+	
+}   
+#cart{
+	width: 150px;
+	height: 40px;
+	padding: 3px;
+	text-align: center;
+	color: black;
+}
+#types{
+	
+	text-align: center;
+	}
+	
+#content{
+	padding-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	text-align: center;
+	
+}
+form {
+    padding: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;    
+    }  
+fieldset {
+    width: 650px;
+    display: block;
+    margin: 1px auto 1px auto;
+	padding-top: 1px; 
+    border: 1px solid #777777;
+    }      
+legend {
+	padding: 2px 2px 2px 2px;
+    font-size: smaller;
+    font-weight: bold;
+	border: 1px dotted gray;
+    font-style: oblique;
+    font-family: arial, helvetica;
+	margin:10px;
+    } 
+label {
+    background-color: #EEE;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+    
+input {
+    font-family: courier;
+    border: 1px solid #DDD;
+    }
+.error {
+    border:  1px solid red;   
+    background-color: #FEE;  
+    }
+ #button_panel {
+    text-align: center;
+    padding-top: 5px;
+	padding-bottom: 5px;
+	font-family:Arial;
+    }  
+#message_line {
+    height: 50px;
+    color: red;
+    font-family: sans-serif;
+    font-style: italic;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    }
+.required label:before {
+    color: red;
+    content: ' *';
+    display:inline;
+}
+.butt,.qty,.buy,.ordernow,.update,.delete{
+	padding: 2px;
+	text-align: center;
+	color:black;
+	border:1px solid black;
+	font-family:Arial;
+	font-size:13px;
+	background-color :orange;
+	display: inline-block;
+	
+}
+    
+	
+.clear_it {
+    clear: both;
+    }
+ #product{
+float:left;
+padding:5px 10px 10px 1px;
+height:150px;
+text-align:center;
+width:250px
+}
+#read {
+    border: 2px solid orange;
+	padding: 15px 15px 15px 15px;
+	margin:50px;
+	
+}
